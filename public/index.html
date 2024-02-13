@@ -31,8 +31,8 @@
       header {
         background: linear-gradient(
           to right,
-          #ac8c5c,
-          #ae894d
+          #795d32,
+          #836535
         ); /* Gradient background */
         padding: 50px; /* Adjusted padding for better readability */
         text-align: center;
@@ -251,6 +251,92 @@
         width: 22%;
         border-radius: 8px;
       }
+
+      #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #myImg:hover {
+        opacity: 0.7;
+      }
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+      }
+
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+
+      /* Add Animation */
+      .modal-content,
+      #caption {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+
+      @keyframes zoom {
+        from {
+          transform: scale(0.1);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px) {
+        .modal-content {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -288,8 +374,8 @@
           <div class="card-testimonial">
             <article>
               <picture>
-                <source media="(min-width: 768px)" srcset="./img/8.jpg" />
-                <img src="./img/8.jpg" alt="sample-one.jpeg" />
+                <source media="(min-width: 768px)" srcset="./img/fur10.jpg" />
+                <img src="./img/fur10.jpg" alt="sample-one.jpeg" />
               </picture>
               <h4>Sample title only</h4>
               <article class="short-description">
@@ -305,8 +391,8 @@
           <div class="card-testimonial">
             <article>
               <picture>
-                <source media="(min-width: 768px)" srcset="./img/2.jpg" />
-                <img src="./img/2.jpg" alt="sample-one.jpeg" />
+                <source media="(min-width: 768px)" srcset="./img/fur9.jpg" />
+                <img src="./img/fur9.jpg" alt="sample-one.jpeg" />
               </picture>
               <h4>Sample title only</h4>
               <article class="short-description">
@@ -322,8 +408,8 @@
           <div class="card-testimonial">
             <article>
               <picture>
-                <source media="(min-width: 768px)" srcset="./img/3.jpg" />
-                <img src="./img/3.jpg" alt="sample-one.jpeg" />
+                <source media="(min-width: 768px)" srcset="./img/fur8.jpg" />
+                <img src="./img/fur8.jpg" alt="sample-one.jpeg" />
               </picture>
               <h4>Sample title only</h4>
               <article class="short-description">
@@ -339,8 +425,8 @@
           <div class="card-testimonial">
             <article>
               <picture>
-                <source media="(min-width: 768px)" srcset="./img/9.jpg" />
-                <img src="./img/9.jpg" alt="sample-one.jpeg" />
+                <source media="(min-width: 768px)" srcset="./img/fur7.jpg" />
+                <img src="./img/fur7.jpg" alt="sample-one.jpeg" />
               </picture>
               <h4>Sample title only</h4>
               <article class="short-description">
@@ -356,8 +442,8 @@
           <div class="card-testimonial">
             <article>
               <picture>
-                <source media="(min-width: 768px)" srcset="./img/5.jpg" />
-                <img src="./img/5.jpg" alt="sample-one.jpeg" />
+                <source media="(min-width: 768px)" srcset="./img/fur4.jpg" />
+                <img src="./img/fur4.jpg" alt="sample-one.jpeg" />
               </picture>
               <h4>Sample title only</h4>
               <article class="short-description">
@@ -373,8 +459,8 @@
           <div class="card-testimonial">
             <article>
               <picture>
-                <source media="(min-width: 768px)" srcset="./img/6.jpg" />
-                <img src="./img/6.jpg" alt="sample-one.jpeg" />
+                <source media="(min-width: 768px)" srcset="./img/fur4.jpg" />
+                <img src="./img/fur4.jpg" alt="sample-one.jpeg" />
               </picture>
               <h4>Sample title only</h4>
               <article class="short-description">
@@ -390,8 +476,8 @@
           <div class="card-testimonial">
             <article>
               <picture>
-                <source media="(min-width: 768px)" srcset="./img/7.jpg" />
-                <img src="./img/7.jpg" alt="sample-one.jpeg" />
+                <source media="(min-width: 768px)" srcset="./img/fur5.jpg" />
+                <img src="./img/fur5.jpg" alt="sample-one.jpeg" />
               </picture>
               <h4>Sample title only</h4>
               <article class="short-description">
@@ -417,52 +503,56 @@
       </h2>
       <div class="catalog">
         <div class="catalog-item">
-          <a href="kitchen.html">
-            <img src="./img/8.jpg" alt="Kitchen Cabinet 1" />
-            <h3
-              style="font-weight: bold; margin-top: 10px; margin-bottom: 10px"
-            >
-              Modern White Cabinets
-            </h3>
-            <p>Sleek and minimalist design</p>
-            <p><span>&#8377;25,000 - &#8377;50,000</span></p>
-          </a>
+          <img
+            id="kitchenImg1"
+            src="./img/fur10.jpg"
+            alt="Modern White Cabinets"
+            onclick="openModal('./img/fur10.jpg', 'Modern White Cabinets')"
+          />
+          <h3 style="font-weight: bold; margin-top: 10px; margin-bottom: 10px">
+            Modern White Cabinets
+          </h3>
+          <p>Sleek and minimalist design</p>
+          <p><span>&#8377;25,000 - &#8377;50,000</span></p>
         </div>
         <div class="catalog-item">
-          <a href="kitchen.html">
-            <img src="./img/7.jpg" alt="Kitchen Cabinet 2" />
-            <h3
-              style="font-weight: bold; margin-top: 10px; margin-bottom: 10px"
-            >
-              Classic Wooden Cabinets
-            </h3>
-            <p>Timeless elegance for your kitchen</p>
-            <p><span>&#8377;30,000 - &#8377;60,000</span></p>
-          </a>
+          <img
+            id="kitchenImg2"
+            src="./img/fur9.jpg"
+            alt="Classic Wooden Cabinets"
+            onclick="openModal('./img/fur9.jpg', 'Classic Wooden Cabinets')"
+          />
+          <h3 style="font-weight: bold; margin-top: 10px; margin-bottom: 10px">
+            Classic Wooden Cabinets
+          </h3>
+          <p>Timeless elegance for your kitchen</p>
+          <p><span>&#8377;30,000 - &#8377;60,000</span></p>
         </div>
         <div class="catalog-item">
-          <a href="kitchen.html">
-            <img src="./img/5.jpg" alt="Kitchen Cabinet 3" />
-            <h3
-              style="font-weight: bold; margin-top: 10px; margin-bottom: 10px"
-            >
-              Contemporary Glass Cabinets
-            </h3>
-            <p>Showcase your kitchen essentials</p>
-            <p><span>&#8377;40,000 - &#8377;80,000</span></p>
-          </a>
+          <img
+            id="kitchenImg3"
+            src="./img/fur8.jpg"
+            alt="Contemporary Glass Cabinets"
+            onclick="openModal('./img/fur8.jpg', 'Contemporary Glass Cabinets')"
+          />
+          <h3 style="font-weight: bold; margin-top: 10px; margin-bottom: 10px">
+            Contemporary Glass Cabinets
+          </h3>
+          <p>Showcase your kitchen essentials</p>
+          <p><span>&#8377;40,000 - &#8377;80,000</span></p>
         </div>
         <div class="catalog-item">
-          <a href="kitchen.html">
-            <img src="./img/9.jpg" alt="Kitchen Cabinet 4" />
-            <h3
-              style="font-weight: bold; margin-top: 10px; margin-bottom: 10px"
-            >
-              Customizable Modular Cabinets
-            </h3>
-            <p>Create your dream kitchen layout</p>
-            <p><span>&#8377;50,000 - &#8377;100,000</span></p>
-          </a>
+          <img
+            id="kitchenImg4"
+            src="./img/fur7.jpg"
+            alt="Customizable Modular Cabinets"
+            onclick="openModal('./img/fur7.jpg', 'Customizable Modular Cabinets')"
+          />
+          <h3 style="font-weight: bold; margin-top: 10px; margin-bottom: 10px">
+            Customizable Modular Cabinets
+          </h3>
+          <p>Create your dream kitchen layout</p>
+          <p><span>&#8377;50,000 - &#8377;100,000</span></p>
         </div>
         <!-- Add more kitchen cabinet options as needed -->
       </div>
@@ -475,28 +565,37 @@
       </h2>
       <div class="catalog">
         <div class="catalog-item">
-          <a href="wardrobe.html#single-door">
-            <img src="./img/2.jpg" alt="Single Door Wardrobe" />
-            <h3>Single Door Wardrobe</h3>
-            <p>Elegant wardrobe with a single door</p>
-            <p><span>&#8377;30,000 - &#8377;60,000</span></p>
-          </a>
+          <img
+            id="wardrobeImg1"
+            src="./img/fur6.jpg"
+            alt="Single Door Wardrobe"
+            onclick="openModal('./img/fur6.jpg', 'Single Door Wardrobe')"
+          />
+          <h3>Single Door Wardrobe</h3>
+          <p>Elegant wardrobe with a single door</p>
+          <p><span>&#8377;30,000 - &#8377;60,000</span></p>
         </div>
         <div class="catalog-item">
-          <a href="wardrobe.html#double-sliding-door">
-            <img src="./img/10.jpg" alt="Double Sliding Door Wardrobe" />
-            <h3>Double Sliding Door Wardrobe</h3>
-            <p>Luxurious wardrobe with double sliding doors</p>
-            <p><span>&#8377;50,000 - &#8377;90,000</span></p>
-          </a>
+          <img
+            id="wardrobeImg2"
+            src="./img/fur5.jpg"
+            alt="Double Sliding Door Wardrobe"
+            onclick="openModal('./img/fur6.jpg', 'Double Sliding Door Wardrobe')"
+          />
+          <h3>Double Sliding Door Wardrobe</h3>
+          <p>Luxurious wardrobe with double sliding doors</p>
+          <p><span>&#8377;50,000 - &#8377;90,000</span></p>
         </div>
         <div class="catalog-item">
-          <a href="wardrobe.html#wall-mounted">
-            <img src="./img/3.jpg" alt="Wall Mounted Wardrobe" />
-            <h3>Wall Mounted Wardrobe</h3>
-            <p>Space-saving wardrobe designed to be wall-mounted</p>
-            <p><span>&#8377;40,000 - &#8377;70,000</span></p>
-          </a>
+          <img
+            id="wardrobeImg3"
+            src="./img/fur4.jpg"
+            alt="Wall Mounted Wardrobe"
+            onclick="openModal('./img/fur4.jpg', 'Wall Mounted Wardrobe')"
+          />
+          <h3>Wall Mounted Wardrobe</h3>
+          <p>Space-saving wardrobe designed to be wall-mounted</p>
+          <p><span>&#8377;40,000 - &#8377;70,000</span></p>
         </div>
         <!-- Add more wardrobe options as needed -->
       </div>
@@ -507,28 +606,37 @@
       <h2 style="font-weight: bold">Drawers</h2>
       <div class="catalog">
         <div class="catalog-item">
-          <a href="drawers.html">
-            <img src="./img/1.jpg" alt="Drawer 1" />
-            <h3>Classic Drawers</h3>
-            <p>Timeless and functional drawer units</p>
-            <p><span>&#8377;10,000 - &#8377;30,000</span></p>
-          </a>
+          <img
+            id="drawerImg1"
+            src="./img/fur1.jpg"
+            alt="Classic Drawers"
+            onclick="openModal('./img/fur1.jpg', 'Classic Drawers')"
+          />
+          <h3>Classic Drawers</h3>
+          <p>Timeless and functional drawer units</p>
+          <p><span>&#8377;10,000 - &#8377;30,000</span></p>
         </div>
         <div class="catalog-item">
-          <a href="drawers.html">
-            <img src="./img/9.jpg" alt="Drawer 2" />
-            <h3>Modern Drawers</h3>
-            <p>Sleek and contemporary drawer designs</p>
-            <p><span>&#8377;15,000 - &#8377;40,000</span></p>
-          </a>
+          <img
+            id="drawerImg2"
+            src="./img/fur2.jpg"
+            alt="Modern Drawers"
+            onclick="openModal('./img/fur2.jpg', 'Modern Drawers')"
+          />
+          <h3>Modern Drawers</h3>
+          <p>Sleek and contemporary drawer designs</p>
+          <p><span>&#8377;15,000 - &#8377;40,000</span></p>
         </div>
         <div class="catalog-item">
-          <a href="drawers.html">
-            <img src="./img/5.jpg" alt="Drawer 3" />
-            <h3>Compact Drawers</h3>
-            <p>Perfect for maximizing small spaces</p>
-            <p><span>&#8377;8,000 - &#8377;20,000</span></p>
-          </a>
+          <img
+            id="drawerImg3"
+            src="./img/fur3.jpg"
+            alt="Compact Drawers"
+            onclick="openModal('./img/fur3.jpg', 'Compact Drawers')"
+          />
+          <h3>Compact Drawers</h3>
+          <p>Perfect for maximizing small spaces</p>
+          <p><span>&#8377;8,000 - &#8377;20,000</span></p>
         </div>
         <!-- Add more drawer options as needed -->
       </div>
@@ -555,6 +663,35 @@
       <img src="./img/9.jpg" alt="Image 3" />
       <img src="./img/9.jpg" alt="Image 4" />
     </section> -->
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="caption"></div>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+      var modalImg = document.getElementById("modalImg");
+      var captionText = document.getElementById("caption");
+
+      function openModal(imageSrc, altText) {
+        modal.style.display = "block";
+        modalImg.src = imageSrc;
+        captionText.innerHTML = altText;
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
 
     <script src="/public/js/main.js" defer></script>
   </body>
